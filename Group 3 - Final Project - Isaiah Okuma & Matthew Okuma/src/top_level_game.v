@@ -9,7 +9,6 @@
 // ECE 3300 Final Project
 //////////////////////////////////////////////////////////////////////////////////
 
-`define SIMULATION
 module top_level_game(
     input clk_100MHz,       
     input reset_btn,        
