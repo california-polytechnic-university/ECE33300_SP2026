@@ -40,6 +40,6 @@ The FPGA runs the Verilog design that controls the game logic, movement, VGA tim
 7. Try to collect as many dots as possible.
 
 ## Group Members
-Group 8
+Group 8:
 Karen Heredia |
 Marcos Reyes 
