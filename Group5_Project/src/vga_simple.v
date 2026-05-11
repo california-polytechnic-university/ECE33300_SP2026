@@ -1,5 +1,3 @@
-DELETEEEEEEEE
-
 module vga_simple(
     input clk,
     input [3:0] game_state,
