@@ -1,9 +1,9 @@
-// Converts UART bytes into paddle movement commands using a FIFO Action Queue.
-// Also detects the cheat code "Up-Up-Down-Down" (WWSS) to reset blocks.
+// Converts UART bytes into paddle movement commands using a FIFO
+// Also detects cheat code "Up-Up-Down-Down" (WWSS) to reset blocks.
 
 module uart_wasd_controller #(
     parameter integer CLK_FREQ_HZ       = 100000000,
-    parameter integer BAUD_RATE         = 115200,
+    parameter integer BAUD_RATE         = 115200, ..must match Tera Term
     parameter integer MOVE_TICKS_PER_KEY = 16
 )(
     input  wire       clk,
@@ -27,7 +27,7 @@ module uart_wasd_controller #(
     reg [15:0] ticks_remaining;
     reg [3:0]  decoded_dir;
     reg        stop_command;
-    reg [15:0] history_reg; // Stores the last 4 commands (4 bits each)
+    reg [15:0] history_reg; // Stores the last 4 commands (each command is 4 bit)
 
     // Instantiate UART Receiver
     uart_rx #(
@@ -41,7 +41,7 @@ module uart_wasd_controller #(
         .data_valid (rx_valid)
     );
 
-    // Instantiate FIFO (Action Queue)
+    // Instantiate FIFO 
     sync_fifo #(
         .DATA_WIDTH(8),
         .ADDR_WIDTH(4)
@@ -56,7 +56,7 @@ module uart_wasd_controller #(
         .full    (fifo_full)
     );
 
-    // Combinational Decoding of the FIFO output
+    //  Decoding of the FIFO output from keyboard
     always @(*) begin
         decoded_dir  = 4'b0000;
         stop_command = 1'b0;
@@ -119,7 +119,7 @@ module uart_wasd_controller #(
                 end
             endcase
 
-            // Handle movement tick decrement outside the state machine
+            // Handle tick decrement outside of the state machine
             if (move_tick && (ticks_remaining != 16'd0)) begin
                 ticks_remaining <= ticks_remaining - 1'b1;
                 if (ticks_remaining == 16'd1) begin
