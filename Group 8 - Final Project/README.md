@@ -5,7 +5,7 @@ Pacman VGA Game on FPGA
 
 ## Project Overview
 This project is a Pacman-style game designed for the ECE 3300 final project. The game is implemented using Verilog and displayed through VGA output. The player controls Pacman on the screen while collecting dots and moving through the game map.
-
+ 
 ## Features
 - VGA display output
 - Pacman character movement
