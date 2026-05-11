@@ -1,4 +1,4 @@
-
+DELETEEEEEEEE
 
 module vga_simple(
     input clk,
