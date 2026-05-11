@@ -1,10 +1,9 @@
-// Simple UART receiver for 8-N-1 serial data.
+//UART receiver for 8-N-1 serial data.
 //
-// Default settings match the Nexys A7 100 MHz system clock and a common
 // TeraTerm configuration of 115200 baud, 8 data bits, no parity, 1 stop bit.
 //
-// rx is the UART serial input from the USB-UART bridge. data_valid pulses
-// high for one clk cycle whenever a valid byte has been received.
+// rx is the UART serial input from the USB-UART bridge.
+// data_valid pulses high for one clk cycle whenever a valid byte is received.
 
 module uart_rx #(
     parameter integer CLK_FREQ_HZ = 100000000,
@@ -29,7 +28,7 @@ module uart_rx #(
     reg [31:0] baud_count;
     reg [2:0]  bit_index;
 
-    // Synchronize the asynchronous UART input into the FPGA clock domain.
+    // Synchronize asynchronous UART input into FPGA clock domain.
     reg rx_meta;
     reg rx_sync;
 
@@ -58,7 +57,7 @@ module uart_rx #(
                     baud_count <= 32'd0;
                     bit_index  <= 3'd0;
 
-                    // UART idles high. A falling edge starts a byte.
+                    // A falling edge starts a byte.
                     if (rx_sync == 1'b0)
                         state <= STATE_START;
                 end
@@ -100,7 +99,7 @@ module uart_rx #(
                         baud_count <= 32'd0;
                         state      <= STATE_IDLE;
 
-                        // A valid 8-N-1 frame has a high stop bit.
+                        
                         if (rx_sync == 1'b1)
                             data_valid <= 1'b1;
                     end else begin
