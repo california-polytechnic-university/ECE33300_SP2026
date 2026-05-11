@@ -36,18 +36,15 @@ module game_fsm(
     reg [15:0] result_counter = 0;
 
     reg [15:0] lfsr = 16'hACE1;
-
-    // =====================================================
+    
     // RESET SIGNAL
-    // =====================================================
+
 
     wire reset_game;
     assign reset_game = sw[0];
 
-    // =====================================================
     // GATE-LEVEL ANY BUTTON LOGIC
-    // =====================================================
-
+    
     wire any_button;
 
     wire or1_out;
