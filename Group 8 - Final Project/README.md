@@ -41,5 +41,5 @@ The FPGA runs the Verilog design that controls the game logic, movement, VGA tim
 
 ## Group Members
 Group 8
-Karen Heredia 
+Karen Heredia |
 Marcos Reyes 
