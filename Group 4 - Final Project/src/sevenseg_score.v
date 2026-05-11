@@ -1,12 +1,10 @@
 // 7-segment score display driver for an active-low, common-anode display
-// such as the Nexys A7/Basys-style Digilent 7-segment display.
 //
 // Segment bit order is seg[6:0] = {g, f, e, d, c, b, a}.
 // an[0] is the right-most digit. A 0 enables a digit/segment.
 //
 // This version accepts a 27-bit score and displays up to 8 decimal digits.
-// Scores above 99,999,999 are clamped to 99,999,999 because the board has
-// eight 7-segment digits.
+// Scores above 99,999,999 are clamped to 99,999,999 because the board has eight 7-segment digits.
 
 module sevenseg_score(
     input  wire        clk,
@@ -38,7 +36,7 @@ module sevenseg_score(
     assign score_limited = (score > DISPLAY_MAX) ? DISPLAY_MAX : score;
     assign shifted_combo = {bcd_add3, binary_shift} << 1;
 
-    // Decimal point off. This is active-low on the Nexys A7.
+    // Decimal point off. This is active-low on Nexys
     assign dp = 1'b1;
 
     // One step of the double-dabble add-3 operation. This is kept separate
@@ -65,9 +63,7 @@ module sevenseg_score(
             bcd_add3[31:28] = bcd_add3[31:28] + 4'd3;
     end
 
-    // Sequential binary-to-BCD conversion. A score change is visible on the
-    // display after at most a few dozen 100 MHz clock cycles, which is far
-    // faster than a human can notice.
+    // Sequential binary-to-BCD conversion. 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             score_sampled  <= 27'd0;
@@ -101,8 +97,6 @@ module sevenseg_score(
     end
 
     // Display multiplexing.
-    // With a 100 MHz clock, each digit is refreshed about 190 times/second:
-    // 100 MHz / 65536 / 8 = 190.7 Hz.
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             refresh_count <= 16'd0;
