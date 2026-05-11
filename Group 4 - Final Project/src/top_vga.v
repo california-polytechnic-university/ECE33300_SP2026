@@ -1,6 +1,6 @@
 module top_vga(
-               input  wire       clk,          // 100 MHz board clock on Nexys A7
-               input  wire       rst,          // Active-high reset
+               input  wire       clk,          // 100 MHz board clock
+               input  wire       rst,          // reset, active-high 
                input  wire [3:0] move_dir,     // Buttons: {up, right, down, left}
                input  wire       score_select, // SW0: 0 = current cycle score, 1 = cumulative score
                input  wire       uart_rx,      // USB-UART RX from laptop/TeraTerm
@@ -54,8 +54,7 @@ module top_vga(
    wire        game_over;
    wire        reset_blocks;
 
-   // Physical buttons and UART keyboard commands are merged before they reach
-   // paddle.v. The paddle module expects one-hot {up,right,down,left}.
+   // Physical buttons and UART keyboard commands are merged before they reach paddle.v. The paddle module expects one-hot {up,right,down,left}.
    // Buttons take priority whenever at least one button is pressed.
    wire [3:0] button_move_dir;
    wire [3:0] uart_move_dir;
@@ -68,8 +67,8 @@ module top_vga(
    localparam integer UART_BAUD_RATE          = 115200;
    localparam integer UART_MOVE_TICKS_PER_KEY = 16;
 
-   // Hold the one-clock UART cheat pulse long enough for pixpulse-based block
-   // modules to see it. This preserves main's cheat-reset function reliably.
+  // Hold the one-clock UART cheat pulse long enough for pixpulse-based block
+  // modules to see it. This preserves main's cheat-reset function reliably.
    localparam [3:0] CHEAT_RESET_HOLD_COUNT = 4'd8;
 
    assign any_block          = |draw_block;
@@ -77,9 +76,8 @@ module top_vga(
    assign cheat_reset_blocks = (cheat_reset_counter != 4'd0);
    assign unbreak            = all_broken | cheat_reset_blocks | reset_blocks;
 
-   //---------------------------------------------
+   
    // VGA Timing Generator
-   //---------------------------------------------
    vga_timing vga_gen (
       .clk      (clk),
       .pixpulse (pixpulse),
@@ -92,9 +90,7 @@ module top_vga(
       .vblank   (vblank)
    );
 
-   //---------------------------------------------
    // UART keyboard controller
-   //---------------------------------------------
    // TeraTerm sends ASCII bytes. The uart_wasd_controller decodes W/A/S/D and
    // produces the same one-hot direction format used by the pushbuttons.
    uart_wasd_controller #(
@@ -120,7 +116,7 @@ module top_vga(
       end
    end
 
-   // Convert any simultaneous button presses into a single legal one-hot value.
+   // Convert button presses into a single legal one-hot value.
    // Priority, from highest to lowest, is up, right, down, left.
    assign button_move_dir = move_dir[3] ? 4'b1000 :
                             move_dir[2] ? 4'b0100 :
@@ -144,12 +140,11 @@ module top_vga(
       .yloc        (paddle_yloc)
    );
 
-   //---------------------------------------------
+   
    // Score calculation
-   //---------------------------------------------
    // current_score is the number of blocks currently broken in this cycle.
-   // It returns to 0 when all blocks are broken, the cheat reset is used, or
-   // the life system resets the block array after game over.
+   // returns to 0 when all blocks are broken, the cheat reset is used, or
+  // the life system resets the block array after game over (out of lives).
    reg [4:0] current_score;
    integer i;
 
@@ -159,10 +154,10 @@ module top_vga(
          current_score = current_score + {4'd0, broken[i]};
    end
 
-   // cumulative_score counts every new block break and does not reset when
-   // the block array is automatically restored for the next game cycle or when
-   // the life system resets the current-cycle score. It only resets when the
-   // board reset input rst is asserted.
+   // cumulative_score counts every new block break 
+  // doess not reset when the block array is automatically restored for the next game cycle (finisih game)
+  // or when the life system resets the current-cycle score (out of lives). 
+   // It only resets when the board reset input rst is asserted.
    localparam [26:0] CUMULATIVE_SCORE_MAX = 27'd99999999;
 
    reg  [26:0] cumulative_score;
@@ -199,8 +194,8 @@ module top_vga(
       end
    end
 
-   // SW0/score_select controls what the 7-segment display shows:
-   //   score_select = 0: current cycle score
+   // SW0: score_select controls what the 7-segment display shows:
+   //   score_select = 0: current round score
    //   score_select = 1: cumulative score across cycles/lives
    sevenseg_score u_score_display (
       .clk   (clk),
@@ -251,9 +246,8 @@ module top_vga(
       .respawn   (respawn_ball)
    );
 
-   //---------------------------------------------
-   // Life system from final 2
-   //---------------------------------------------
+   
+   // Life system 
    life_fsm u_life_fsm (
       .clk          (clk),
       .rst          (rst),
