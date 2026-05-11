@@ -9,6 +9,7 @@
 Game 1: Win. 
 Game 2: Lose - Button not pressed in time. 
 Game 3: Lose - Wrong button pressed. 
+
 ![Uploading image.png…]()
 
 
