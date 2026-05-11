@@ -12,7 +12,7 @@
 2. Normal Mode: Lose - Button not pressed in time.
 
     2.1 VGA :  [Click here to view the VGA demo video](https://drive.google.com/file/d/1a7IgMDfX4iwCdseOB0LhVXo2HtFI2j8Y/view?usp=sharing)                             
-    2.2 Nexys Board: [Click here to view the Nexys demo video](https://drive.google.com/file/d/1a7IgMDfX4iwCdseOB0LhVXo2HtFI2j8Y/view?usp=sharing)
+    2.2 Nexys Board: [Click here to view the Nexys demo video](https://drive.google.com/file/d/1jA70qxRBhKpUIjY_MyL8XU_EKTXqBiO_/view?usp=sharing)
 3. Hard Mode: Lose - Wrong button pressed. 
 
     3.1 VGA : [Click here to view the VGA demo video](https://drive.google.com/file/d/1KYweMZXSk1eg-koJZSCZTgTLpPGE5qRm/view?usp=sharing)                              
