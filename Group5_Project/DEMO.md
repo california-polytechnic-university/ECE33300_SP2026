@@ -7,7 +7,7 @@
 [Click here to view the demo video](https://drive.google.com/file/d/1makxDx9Wufe4KPZS-dxkAt9MCgnnmd_y/view?usp=sharing)
 
 ## 🎥 Demo Video 3: Gameplay (Slect Mode, Start Game, LEDS, Buttons, 7-Segment)
-1. Easy Mode: Win.                                                                                                                                                   
+1. Easy Mode: Win - ten correct in a row.                                                                                                                                                
 [Click here to view the demo video](https://drive.google.com/file/d/1JpoFDFUD5VWpwUkoQbPwIqan2or_GsIU/view?usp=sharing)
 2. Normal Mode: Lose - Button not pressed in time.                                                                                                                   
 [Click here to view the demo video](https://drive.google.com/file/d/1jA70qxRBhKpUIjY_MyL8XU_EKTXqBiO_/view?usp=sharing)
