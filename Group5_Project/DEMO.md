@@ -10,9 +10,9 @@
 [Click here to view the demo video](https://drive.google.com/file/d/1sKAhh3kHY-fRbWqAKptJLaFbMDYGe4vC/view?usp=drivesdk)
 1. Easy Mode: Win.                                                                                                                                                   
 [Click here to view the demo video](https://drive.google.com/file/d/1JpoFDFUD5VWpwUkoQbPwIqan2or_GsIU/view?usp=sharing)
-2. Normal Mode: Lose - Button not pressed in time. 
+2. Normal Mode: Lose - Button not pressed in time.                                                                                                                   
 [Click here to view the demo video](https://drive.google.com/file/d/1jA70qxRBhKpUIjY_MyL8XU_EKTXqBiO_/view?usp=sharing)
-3.  Hard Mode: Lose - Wrong button pressed. 
+3.  Hard Mode: Lose - Wrong button pressed.                                                                                                                           
 [Click here to view the demo video](https://drive.google.com/file/d/1nxzvXSde67rVhsyg8aelMF4SABkZSjwy/view?usp=sharing)
 ## 🖥️ Demo Image: PuTTY Output
 <img width="820" height="516" alt="Screenshot 2026-05-11 133117" src="https://github.com/user-attachments/assets/0551ab9a-1863-469a-8922-fcf2e2454b14" />
