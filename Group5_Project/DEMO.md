@@ -1,4 +1,4 @@
-## 🎥 Demo Video 1: Gameplay Modes (Easy, Normal, Hard)
+## 🎥 Demo Video 1: Gameplay Modes (Easy, Normal, Hard)                                        In this video, each mode is demonstrated. The modes range from easiet to most difficult. The easiet mode begins at the far-most left switches with 3300ms timer. Then, Each switch decreases by 200ms as you make your way to SW[1]. 
 [Click here to view the demo video](https://drive.google.com/file/d/1b4udwBYASWq1ZiJ5SEropRMO9ITcETil/view?usp=sharing)
 ## 🖥️ Demo Image: PuTTY Output for Modes
 <img width="821" height="517" alt="Screenshot 2026-05-11 133558" src="https://github.com/user-attachments/assets/0ea2a42f-5f2d-40b2-9b88-bfa336dd86fe" />
