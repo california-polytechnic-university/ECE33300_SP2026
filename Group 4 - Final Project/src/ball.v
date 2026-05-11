@@ -1,7 +1,4 @@
 // 3x3 ball drawing and movement control.
-// Merged version: keeps the original movement/collision behavior and adds
-// the life-system respawn input from final 2.
-
 module ball #(parameter xloc_start = 320,
               parameter yloc_start = 240,
               parameter xdir_start = 0,
