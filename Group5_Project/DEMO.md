@@ -9,8 +9,8 @@
 Game 1: Win. 
 Game 2: Lose - Button not pressed in time. 
 Game 3: Lose - Wrong button pressed. 
+<img width="820" height="516" alt="Screenshot 2026-05-11 133117" src="https://github.com/user-attachments/assets/0551ab9a-1863-469a-8922-fcf2e2454b14" />
 
-![Uploading image.png…]()
 
 
 
