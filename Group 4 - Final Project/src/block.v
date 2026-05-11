@@ -1,6 +1,4 @@
 // Breakable block.
-// Merged version: keeps the original block behavior and adds safer reset
-// handling so life/cheat/all-block resets clear collision history too.
 
 module block #(parameter xloc = 120,
                parameter yloc = 100,
