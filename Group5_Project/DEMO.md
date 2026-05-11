@@ -2,6 +2,7 @@
 [Click here to view the demo video](https://drive.google.com/file/d/1Dz-b6R1SzZnjduhw74eKBMhLO2-Aw5Ep/view?usp=sharing)
 ## 🎥 Demo Video 2: VGA 
 <iframe src="https://drive.google.com/file/d/1makxDx9Wufe4KPZS-dxkAt9MCgnnmd_y/preview" width="640" height="480"></iframe>
+
 ## 🎥 Demo Video 3: Gameplay (Slect Mode, Start Game, LEDS, Buttons, 7-Segment)
 
 ## 🖥️ Demo Image: PuTTY Output
