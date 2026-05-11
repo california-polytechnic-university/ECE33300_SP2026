@@ -53,24 +53,18 @@ module life_fsm(
             hit_locked <= 1'b0;
         end else begin
 
-            //-----------------------------------------
             // Count down reset pulses
-            //-----------------------------------------
             if (respawn_counter != 0)
                 respawn_counter <= respawn_counter - 1'b1;
 
             if (block_reset_counter != 0)
                 block_reset_counter <= block_reset_counter - 1'b1;
 
-            //-----------------------------------------
             // Unlock hit detection after ball resets
-            //-----------------------------------------
             if (ball_yloc < 10'd300)
                 hit_locked <= 1'b0;
 
-            //-----------------------------------------
             // DEAD pause
-            //-----------------------------------------
             if (state == DEAD) begin
                 if (dead_counter >= DEAD_PAUSE_COUNT) begin
                     dead_counter <= 28'd0;
@@ -88,9 +82,7 @@ module life_fsm(
                 end
             end
 
-            //-----------------------------------------
             // Lose lives on bottom wall hit
-            //-----------------------------------------
             else if (bottom_hit) begin
                 hit_locked <= 1'b1;
 
