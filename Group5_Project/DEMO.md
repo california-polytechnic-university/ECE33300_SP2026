@@ -4,7 +4,7 @@
 [Click here to view the demo video](https://drive.google.com/file/d/1makxDx9Wufe4KPZS-dxkAt9MCgnnmd_y/view?usp=sharing)
 
 ## 🎥 Demo Video 3: Gameplay (Slect Mode, Start Game, LEDS, Buttons, 7-Segment)
-
+[Click here to view the demo video](https://drive.google.com/file/d/1makxDx9Wufe4KPZS-dxkAt9MCgnnmd_y/view?usp=sharing)(https://drive.google.com/file/d/1sKAhh3kHY-fRbWqAKptJLaFbMDYGe4vC/view?usp=sharing)
 ## 🖥️ Demo Image: PuTTY Output
 Game 1: Win. 
 Game 2: Lose - Button not pressed in time. 
