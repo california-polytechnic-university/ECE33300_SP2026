@@ -1,9 +1,9 @@
 // Standard Synchronous FIFO
-// Holds UART bytes before they are processed by the game logic
+// FIFO purpose is hold UART bytes from keyboard before they are processed by the game logic
 
 module sync_fifo #(
     parameter DATA_WIDTH = 8,
-    parameter ADDR_WIDTH = 4 // 2^4 = 16 elements deep
+    parameter ADDR_WIDTH = 4 // 2^4 = 16 elements 
 )(
     input  wire clk,
     input  wire rst,
@@ -30,23 +30,23 @@ module sync_fifo #(
             count   <= 0;
             rd_data <= 0;
         end else begin
-            // Handle Write
+            // Handle writing
             if (wr_en && !full) begin
                 mem[wr_ptr] <= wr_data;
                 wr_ptr <= wr_ptr + 1'b1;
             end
             
-            // Handle Read
+            // Handle reading
             if (rd_en && !empty) begin
                 rd_data <= mem[rd_ptr];
                 rd_ptr <= rd_ptr + 1'b1;
             end
             
-            // Handle Count
+            // Handle counting
             case ({wr_en && !full, rd_en && !empty})
                 2'b10: count <= count + 1'b1; // Write only
                 2'b01: count <= count - 1'b1; // Read only
-                default: count <= count;      // Both or neither
+                default: count <= count;      // Either R or W, or neither
             endcase
         end
     end
