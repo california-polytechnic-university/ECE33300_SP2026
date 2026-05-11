@@ -17,8 +17,7 @@ This project is a Pacman-style game designed for the ECE 3300 final project. The
 ## Files Included
 - `Final Project Report.pdf` 
 - `block_diagram-pacman.png` - Block diagram of the project
-- `README.md` - Description of the project folder
-
+-  source files, constraints, testbench 
 ## Hardware Used
 - Nexys A7 FPGA board
 - VGA display/monitor
@@ -42,3 +41,5 @@ The FPGA runs the Verilog design that controls the game logic, movement, VGA tim
 
 ## Group Members
 Group 8
+Karen Heredia 
+Marcos Reyes 
