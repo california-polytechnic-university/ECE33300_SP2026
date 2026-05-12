@@ -9,7 +9,7 @@
 1. Easy Mode: Win - ten correct in a row.
 
     1.1 VGA : [Click here to view the VGA demo video](https://drive.google.com/file/d/1QuUgGDfcr5IRqyqEVlF8okWpQtkwoAcI/view?usp=sharing)                              
-    1.2 Nexys Board: [Click here to view the Nexys demo video](https://drive.google.com/file/d/1JpoFDFUD5VWpwUkoQbPwIqan2or_GsIU/view?usp=sharing)                    
+    1.2 Nexys Board: [Click here to view the Nexys demo video](https://drive.google.com/file/d/1KMaLaLmy24zsPGPdMtH3eDEaY5O32-XH/view?usp=sharing)                    
 2. Normal Mode: Lose - Button not pressed in time.
 
     2.1 VGA :  [Click here to view the VGA demo video](https://drive.google.com/file/d/1a7IgMDfX4iwCdseOB0LhVXo2HtFI2j8Y/view?usp=sharing)                             
