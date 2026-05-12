@@ -1,0 +1,500 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon May 11 22:06:24 2026
+# Process ID: 9644
+# Current directory: C:/Users/Kevin/vga/vga.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/Kevin/vga/vga.runs/synth_1/top.vds
+# Journal file: C:/Users/Kevin/vga/vga.runs/synth_1\vivado.jou
+# Running On: DESKTOP-J7OSBF5, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 16, Host memory: 34084 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 462.121 ; gain = 184.312
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Kevin/vga/vga.srcs/utils_1/imports/synth_1/vga_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Kevin/vga/vga.srcs/utils_1/imports/synth_1/vga_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11040
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1326.898 ; gain = 440.086
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-9339] data object 'in_mon_text_area' is already declared [C:/Users/Kevin/vga/vga.srcs/sources_1/new/screen_renderer.v:219]
+INFO: [Synth 8-6826] previous declaration of 'in_mon_text_area' is from here [C:/Users/Kevin/vga/vga.srcs/sources_1/new/screen_renderer.v:206]
+CRITICAL WARNING: [Synth 8-11152] second declaration of 'in_mon_text_area' is ignored [C:/Users/Kevin/vga/vga.srcs/sources_1/new/screen_renderer.v:219]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [C:/Users/Kevin/vga/vga.runs/synth_1/.Xil/Vivado-9644-DESKTOP-J7OSBF5/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (0#1) [C:/Users/Kevin/vga/vga.runs/synth_1/.Xil/Vivado-9644-DESKTOP-J7OSBF5/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'case_selector' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_case_selector.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'case_selector' (0#1) [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_case_selector.v:3]
+INFO: [Synth 8-6157] synthesizing module 'game_fsm' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/game_fsm.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'game_fsm' (0#1) [C:/Users/Kevin/vga/vga.srcs/sources_1/new/game_fsm.v:22]
+INFO: [Synth 8-6157] synthesizing module 'display' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_display.v:2]
+INFO: [Synth 8-226] default block is never used [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_display.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'display' (0#1) [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_display.v:2]
+INFO: [Synth 8-6157] synthesizing module 'prize_logic' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_prize_logic.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'prize_logic' (0#1) [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_prize_logic.v:9]
+INFO: [Synth 8-6157] synthesizing module 'bank_logic' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_bank_logic.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'bank_logic' (0#1) [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_bank_logic.v:9]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_uart_tx.v:3]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter BAUD_RATE bound to: 3000000 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_uart_tx.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_uart_tx.v:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_top' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/VGA_top.v:3]
+	Parameter TEST_PATTERN bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Kevin/vga/vga.runs/synth_1/.Xil/Vivado-9644-DESKTOP-J7OSBF5/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/Kevin/vga/vga.runs/synth_1/.Xil/Vivado-9644-DESKTOP-J7OSBF5/realtime/clk_wiz_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'reset' of module 'clk_wiz_0' is unconnected for instance 'pll_inst' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/VGA_top.v:34]
+WARNING: [Synth 8-7023] instance 'pll_inst' of module 'clk_wiz_0' has 4 connections declared, but only 3 given [C:/Users/Kevin/vga/vga.srcs/sources_1/new/VGA_top.v:34]
+INFO: [Synth 8-6157] synthesizing module 'screen_renderer' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/screen_renderer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'font_rom' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/front_rom.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'font_rom' (0#1) [C:/Users/Kevin/vga/vga.srcs/sources_1/new/front_rom.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'screen_renderer' (0#1) [C:/Users/Kevin/vga/vga.srcs/sources_1/new/screen_renderer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Vga' [C:/Users/Kevin/vga/vga.srcs/sources_1/new/VGAreal.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Vga' (0#1) [C:/Users/Kevin/vga/vga.srcs/sources_1/new/VGAreal.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_top' (0#1) [C:/Users/Kevin/vga/vga.srcs/sources_1/new/VGA_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/Kevin/vga/vga.srcs/sources_1/new/top.v:3]
+WARNING: [Synth 8-6014] Unused sequential element temp_total_reg was removed.  [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_prize_logic.v:64]
+WARNING: [Synth 8-6014] Unused sequential element temp_count_reg was removed.  [C:/Users/Kevin/vga/vga.srcs/sources_1/new/u_prize_logic.v:65]
+WARNING: [Synth 8-7129] Port banker_offer[31] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[30] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[29] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[28] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[27] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[26] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[25] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[24] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[23] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[22] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[21] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[20] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[19] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[18] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[17] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[16] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[15] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[14] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[13] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[12] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[11] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[10] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[9] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[8] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[7] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[6] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[5] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[4] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[3] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[2] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[1] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port banker_offer[0] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[31] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[30] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[29] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[28] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[27] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[26] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[25] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[24] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[23] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[22] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[21] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[20] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[19] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[18] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[17] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[16] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[15] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[14] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[13] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[12] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[11] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[10] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[9] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[8] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[7] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[6] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[5] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[4] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[3] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[2] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[1] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opened_case_value[0] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[31] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[30] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[29] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[28] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[27] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[26] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[25] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[24] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[23] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[22] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[21] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[20] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[19] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[18] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[17] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[16] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[15] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[14] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[13] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[12] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[11] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[10] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[9] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[8] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[7] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[6] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[5] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[4] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[3] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[2] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[1] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_total[0] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_average[31] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_average[30] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_average[29] in module screen_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port remaining_average[28] in module screen_renderer is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1450.633 ; gain = 563.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1450.633 ; gain = 563.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1450.633 ; gain = 563.820
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1450.633 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Kevin/vga/vga.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'u_fifo'
+Finished Parsing XDC File [c:/Users/Kevin/vga/vga.gen/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'u_fifo'
+Parsing XDC File [c:/Users/Kevin/vga/vga.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_vga_top/pll_inst'
+Finished Parsing XDC File [c:/Users/Kevin/vga/vga.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_vga_top/pll_inst'
+Parsing XDC File [C:/Users/Kevin/vga/vga.srcs/constrs_1/new/lol.xdc]
+Finished Parsing XDC File [C:/Users/Kevin/vga/vga.srcs/constrs_1/new/lol.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Kevin/vga/vga.srcs/constrs_1/new/lol.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1551.496 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1551.496 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1551.496 ; gain = 664.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1551.496 ; gain = 664.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/Kevin/vga/vga.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/Kevin/vga/vga.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for u_fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_vga_top/pll_inst. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1551.496 ; gain = 664.684
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'case_selector'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'game_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                            00001 |                              000
+                    READ |                            00010 |                              001
+                  WAIT_1 |                            00100 |                              010
+                  WAIT_2 |                            01000 |                              011
+                 PROCESS |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'case_selector'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   START |                              000 |                             0000
+      CHOOSE_PLAYER_CASE |                              001 |                             0001
+               OPEN_CASE |                              010 |                             0010
+            INVALID_CASE |                              011 |                             0111
+            FINAL_REVEAL |                              100 |                             0101
+            BANKER_OFFER |                              101 |                             0011
+         DEAL_OR_NO_DEAL |                              110 |                             0100
+               GAME_OVER |                              111 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'game_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                   START |                               01 |                               01
+                    DATA |                               10 |                               10
+                    STOP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1551.496 ; gain = 664.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   3 Input   12 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 10    
+	   3 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 1     
+	   9 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
+	   5 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
+	   3 Input    2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               12 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 16    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 19    
++---Multipliers : 
+	               7x32  Multipliers := 1     
++---Muxes : 
+	   4 Input   32 Bit        Muxes := 1     
+	  17 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 3     
+	   5 Input   16 Bit        Muxes := 1     
+	   4 Input   16 Bit        Muxes := 1     
+	   3 Input   13 Bit        Muxes := 1     
+	   7 Input   12 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 5     
+	   3 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	  10 Input    8 Bit        Muxes := 1     
+	  11 Input    7 Bit        Muxes := 1     
+	   4 Input    7 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
+	   8 Input    5 Bit        Muxes := 30    
+	   2 Input    5 Bit        Muxes := 4     
+	   8 Input    4 Bit        Muxes := 6     
+	   2 Input    4 Bit        Muxes := 11    
+	  10 Input    4 Bit        Muxes := 2     
+	   6 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 9     
+	   8 Input    1 Bit        Muxes := 12    
+	   4 Input    1 Bit        Muxes := 6     
+	  10 Input    1 Bit        Muxes := 4     
+	   6 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP banker_offer1, operation Mode is: A*B.
+DSP Report: operator banker_offer1 is absorbed into DSP banker_offer1.
+DSP Report: operator banker_offer1 is absorbed into DSP banker_offer1.
+DSP Report: Generating DSP banker_offer1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator banker_offer1 is absorbed into DSP banker_offer1.
+DSP Report: operator banker_offer1 is absorbed into DSP banker_offer1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1633.055 ; gain = 746.242
+---------------------------------------------------------------------------------
+ Sort Area is  banker_offer1_0 : 0 0 : 1424 2811 : Used 1 time 0
+ Sort Area is  banker_offer1_0 : 0 1 : 1387 2811 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|bank_logic  | A*B            | 18     | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|bank_logic  | (PCIN>>17)+A*B | 16     | 8      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1633.055 ; gain = 746.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 1741.270 ; gain = 854.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 1755.781 ; gain = 868.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \u_vga_top/pll_inst  has unconnected pin reset
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1755.781 ; gain = 868.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1755.781 ; gain = 868.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 1755.781 ; gain = 868.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 1755.781 ; gain = 868.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 1755.781 ; gain = 868.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 1755.781 ; gain = 868.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |fifo_generator_0 |         1|
+|2     |clk_wiz_0        |         1|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |clk_wiz        |     1|
+|2     |fifo_generator |     1|
+|3     |CARRY4         |   489|
+|4     |LUT1           |   144|
+|5     |LUT2           |   560|
+|6     |LUT3           |   594|
+|7     |LUT4           |   650|
+|8     |LUT5           |   513|
+|9     |LUT6           |   818|
+|10    |MUXF7          |     9|
+|11    |FDRE           |   183|
+|12    |FDSE           |    18|
+|13    |IBUF           |     8|
+|14    |OBUF           |    47|
++------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 1755.781 ; gain = 868.969
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 158 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1755.781 ; gain = 768.105
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 1755.781 ; gain = 868.969
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1758.625 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 498 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'top' is not ideal for floorplanning, since the cellview 'Vga' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1762.301 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 94d5d5db
+INFO: [Common 17-83] Releasing license: Synthesis
+58 Infos, 106 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1762.301 ; gain = 1287.875
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1762.301 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Kevin/vga/vga.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May 11 22:07:23 2026...
