@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module game_fsm(
     input clk,
     input [15:0] sw,
@@ -36,14 +38,9 @@ module game_fsm(
     reg [15:0] result_counter = 0;
 
     reg [15:0] lfsr = 16'hACE1;
-    
-    // RESET SIGNAL
-
-
+ 
     wire reset_game;
     assign reset_game = sw[0];
-
-    // GATE-LEVEL ANY BUTTON LOGIC
     
     wire any_button;
 
@@ -56,10 +53,6 @@ module game_fsm(
     or g3(or3_out, or1_out, or2_out);
     or g4(any_button, or3_out, btnC);
 
-    // =====================================================
-    // CORRECT BUTTON LOGIC
-    // =====================================================
-
     wire correct_button;
 
     assign correct_button =
@@ -69,16 +62,8 @@ module game_fsm(
         (direction == 3'd3 && btnR) ||
         (direction == 3'd4 && btnC);
 
-    // =====================================================
-    // WRONG BUTTON LOGIC
-    // =====================================================
-
     wire wrong_button;
     assign wrong_button = any_button && !correct_button;
-
-    // =====================================================
-    // RANDOM DIRECTION
-    // =====================================================
 
     wire [2:0] random_direction;
 
@@ -86,10 +71,6 @@ module game_fsm(
         (lfsr[2:0] > 3'd4) ?
         (lfsr[2:0] - 3'd3) :
         lfsr[2:0];
-
-    // =====================================================
-    // CLOCK + LFSR
-    // =====================================================
 
     always @(posedge clk) begin
 
@@ -107,10 +88,6 @@ module game_fsm(
             ms_tick <= 0;
         end
     end
-
-    // =====================================================
-    // MODE SELECT
-    // =====================================================
 
     always @(*) begin
 
@@ -181,10 +158,6 @@ module game_fsm(
         end
     end
 
-    // =====================================================
-    // INITIAL VALUES
-    // =====================================================
-
     initial begin
         game_state = IDLE;
         led = 16'h0000;
@@ -196,10 +169,6 @@ module game_fsm(
         round_count = 0;
         wrong_flash = 0;
     end
-
-    // =====================================================
-    // MAIN FSM
-    // =====================================================
 
     always @(posedge clk) begin
 
@@ -224,10 +193,6 @@ module game_fsm(
 
             case (game_state)
 
-                // =================================================
-                // IDLE
-                // =================================================
-
                 IDLE: begin
 
                     led <= 16'h0000;
@@ -244,10 +209,6 @@ module game_fsm(
 
                     game_state <= WAIT_STATE;
                 end
-
-                // =================================================
-                // WAIT STATE
-                // =================================================
 
                 WAIT_STATE: begin
 
@@ -278,10 +239,6 @@ module game_fsm(
                         end
                     end
                 end
-
-                // =================================================
-                // GO STATE
-                // =================================================
 
                 GO_STATE: begin
 
@@ -326,10 +283,6 @@ module game_fsm(
                     end
                 end
 
-                // =================================================
-                // ROUND WIN
-                // =================================================
-
                 ROUND_WIN: begin
 
                     led <= 16'hFFFF;
@@ -350,10 +303,6 @@ module game_fsm(
                         game_state <= NEXT_ROUND;
                     end
                 end
-
-                // =================================================
-                // NEXT ROUND
-                // =================================================
 
                 NEXT_ROUND: begin
 
@@ -384,10 +333,6 @@ module game_fsm(
                     end
                 end
 
-                // =================================================
-                // LOSE STATE
-                // =================================================
-
                 LOSE_STATE: begin
 
                     led <= 16'h0000;
@@ -400,10 +345,6 @@ module game_fsm(
 
                     game_state <= RESULT;
                 end
-
-                // =================================================
-                // RESULT
-                // =================================================
 
                 RESULT: begin
 
@@ -419,10 +360,6 @@ module game_fsm(
                         wrong_flash <= 1;
                     end
                 end
-
-                // =================================================
-                // DEFAULT
-                // =================================================
 
                 default: begin
                     game_state <= IDLE;
