@@ -33,9 +33,6 @@ module uart_logger(
         old_start <= start;
         tx_start <= 0;
 
-        // =====================================================
-        // BUILD MESSAGE
-        // =====================================================
         if (start_pulse && !sending) begin
 
             msg[0]  <= "M";
@@ -44,7 +41,6 @@ module uart_logger(
             msg[3]  <= "E";
             msg[4]  <= ":";
 
-            // MODE STRING
             if (mode == 2'd0) begin
                 msg[5] <= "E"; msg[6] <= "A"; msg[7] <= "S"; msg[8] <= "Y";
             end else if (mode == 2'd1) begin
@@ -75,9 +71,6 @@ module uart_logger(
             msg[24] <= "S";
             msg[25] <= ":";
 
-            // =====================================================
-            // FIXED RESULT FIELD (PASS / FAIL / RUNN)
-            // =====================================================
             if (win) begin
                 msg[26] <= "W";
                 msg[27] <= "I";
@@ -112,10 +105,6 @@ module uart_logger(
             sending <= 1;
             wait_busy_high <= 0;
         end
-
-        // =====================================================
-        // SEND STATE MACHINE
-        // =====================================================
         else if (sending) begin
 
             if (!busy && !wait_busy_high) begin
