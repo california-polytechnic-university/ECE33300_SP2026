@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module any_button(
     input btnU,
     input btnD,
