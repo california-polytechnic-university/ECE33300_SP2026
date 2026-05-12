@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module simple_fifo #(
     parameter DATA_WIDTH = 20,
     parameter DEPTH = 8
