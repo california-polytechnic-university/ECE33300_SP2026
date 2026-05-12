@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module sevenseg_driver(
     input clk,
     input [15:0] number,
