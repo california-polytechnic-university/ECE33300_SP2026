@@ -5,10 +5,7 @@
 `define MODE_HARD   2'd2
 
 module mother_tb;
-
-    // ----------------------------------------
     // Common clock
-    // ----------------------------------------
     reg CLK100MHZ;
 
     initial begin
@@ -16,9 +13,7 @@ module mother_tb;
         forever #5 CLK100MHZ = ~CLK100MHZ;   // 100 MHz clock
     end
 
-    // ----------------------------------------
     // DUT #1 : simple_fifo
-    // ----------------------------------------
     reg fifo_reset;
     reg fifo_wr_en;
     reg fifo_rd_en;
@@ -42,9 +37,8 @@ module mother_tb;
         .empty (fifo_empty)
     );
 
-    // ----------------------------------------
+
     // DUT #2 : debounce
-    // ----------------------------------------
     reg db_noisy;
     wire db_clean;
 
@@ -54,9 +48,8 @@ module mother_tb;
         .clean (db_clean)
     );
 
-    // ----------------------------------------
+
     // DUT #3 : uart_tx
-    // ----------------------------------------
     reg uart_start;
     reg [7:0] uart_data;
 
@@ -71,9 +64,8 @@ module mother_tb;
         .busy  (uart_busy)
     );
 
-    // ----------------------------------------
-    // DUT #4 : top level full project
-    // ----------------------------------------
+
+    // DUT #4 : top level full project 
     reg [15:0] SW;
 
     reg BTNU;
@@ -121,18 +113,15 @@ module mother_tb;
         .vgaBlue   (vgaBlue)
     );
 
-    // ----------------------------------------
-    // Optional waveform dump
-    // ----------------------------------------
+
+    // waveform dump
     initial begin
         $dumpfile("mother_tb.vcd");
         $dumpvars(0, mother_tb);
     end
 
-    // ----------------------------------------
-    // Tasks
-    // ----------------------------------------
 
+    // Tasks
     task reset_top_game;
         begin
             SW[0] = 1'b1;
@@ -344,9 +333,8 @@ module mother_tb;
         end
     endtask
 
-    // ----------------------------------------
+
     // Initialization
-    // ----------------------------------------
     initial begin
         fifo_reset = 1'b0;
         fifo_wr_en = 1'b0;
@@ -367,9 +355,8 @@ module mother_tb;
         BTNC = 1'b0;
     end
 
-    // ----------------------------------------
+
     // Run all tests
-    // ----------------------------------------
     integer mode_index;
 
     initial begin
